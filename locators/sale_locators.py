@@ -1,0 +1,7 @@
+sale_title = 'h1'
+shop_wd_button = '[class="more button"]'
+wd_banner_text = '//*[contains(text(), "Pristine")]'
+shop_md_link = '//*[contains(text(), "Shop Men")]'
+md_banner_text = '//*[contains(text(), "Men’s Bargains")]'
+shop_luma_link = '//*[contains(text(), "Shop Luma")]'
+luma_banner_text = '//*[contains(text(), "Gear Steals")]'
