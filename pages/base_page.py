@@ -1,4 +1,5 @@
-from playwright.sync_api import Page
+import re
+from playwright.sync_api import Page, expect
 import allure
 
 
@@ -25,3 +26,6 @@ class BasePage:
     @allure.step('Waiting until page is load')
     def wait_until_page_load(self):
         self.page.wait_for_function("document.readyState === 'complete'")
+
+    def wait_until_url_have_(self, text: str):
+        expect(self.page).to_have_url(re.compile(f".*{text}"), timeout=30000)
